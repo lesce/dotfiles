@@ -2,3 +2,5 @@
 ln tmux.conf ~/.tmux.conf
 ln zshrc ~/.zshrc
 ln vimrc ~/.vimrc
+ln bash_profile ~/.bash_profile
+ln inputrc ~/.inputrc
