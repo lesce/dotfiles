@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 alias s="find . -type d \( -name log -o -name tmp \) -prune -o -print | xargs grep -sl"
 alias sa="find . -type d \( -name log -o -name tmp \) -prune -o -print | xargs grep -sn"
 alias c="clear"
-plugins=(git rails rvm nyan lol)
+plugins=(git rails nyan zsh-navigation-tools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,6 +41,7 @@ alias gco='git checkout'
 alias gss='git stash save'
 alias gsp='git stash pop'
 alias gitlog="git log --oneline --decorate --summary --author andrei --no-merges"
-alias t="ctags -R --languages=ruby --exclude=.git --exclude=log . \`bundle list --paths\`"
-
 alias v='vagrant'
+alias t="ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules -R * "
+alias start="mux start xrm"
+alias stop="mux stop xrm"
