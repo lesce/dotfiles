@@ -1,0 +1,53 @@
+# ~/.tmuxinator/xrm.yml
+
+name: xrm
+root: ~/code/eqipia
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t xrm
+
+windows:
+  - editor:
+      layout: 87b2,238x86,0,0{119x86,0,0,0,118x86,120,0,10}
+      panes:
+        - nvim
+        - guard
+  - shell:
+      layout: 368b,238x86,0,0{119x86,0,0,1,118x86,120,0[118x43,120,0,8,118x42,120,44,9]}
+      panes:
+        - rails c
+        - htop
+        - irssi
+
+  - servers:
+      layout: f281,237x86,0,0[238x57,0,0{118x57,0,0[118x28,0,0,2,118x14,0,29,10,118x13,0,44,11],119x57,119,0,6},238x28,0,58,9]
+      panes:
+        - docker-compose up
+        - ssh -N -L whatever
+        - yarn run dev:server
+        - bundle exec rails s
+        - LOG_LEVEL=INFO bundle exec sidekiq

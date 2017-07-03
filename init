@@ -4,3 +4,5 @@ ln zshrc ~/.zshrc
 ln vimrc ~/.vimrc
 ln bash_profile ~/.bash_profile
 ln inputrc ~/.inputrc
+mkdir ~/.tmuxinator
+ln tmuxinator/xrm.yml ~/.tmuxinator/xrm.yml
