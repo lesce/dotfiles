@@ -19,19 +19,18 @@ export EDITOR="vim"
 
 #
 # Powerline theme configs
-POWERLINE_RIGHT_A="date"
 POWERLINE_DATE_FORMAT="%D{%d-%m}"
 POWERLINE_HIDE_USER_NAME="true"
-POWERLINE_SHOW_GIT_ON_RIGHT="true"
+POWERLINE_SHOW_GIT_ON_LEFT="true"
 POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_GIT_CLEAN="😇"
-POWERLINE_GIT_DIRTY="👻"
-POWERLINE_GIT_ADDED="🤑§"
-POWERLINE_GIT_MODIFIED="😍"
+POWERLINE_GIT_CLEAN="🍒"
+POWERLINE_GIT_DIRTY="🍆"
+POWERLINE_GIT_ADDED="🍓"
+POWERLINE_GIT_MODIFIED="🥒"
 POWERLINE_GIT_DELETED="☠️"
-POWERLINE_GIT_UNTRACKED="🤡"
-POWERLINE_GIT_RENAMED="🤖"
-POWERLINE_GIT_UNMERGED="👿"
+POWERLINE_GIT_UNTRACKED="🥑"
+POWERLINE_GIT_RENAMED="🍋"
+POWERLINE_GIT_UNMERGED="🍍"
 POWERLINE_PATH="short"
 
 source $ZSH/oh-my-zsh.sh
@@ -45,3 +44,4 @@ alias v='vagrant'
 alias t="ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules -R * "
 alias start="mux start xrm"
 alias stop="mux stop xrm"
+alias xrmdb="PGPASSWORD=aipiqe psql -h localhost -d eqipia_development -p 5433 -U eqipia -W"
