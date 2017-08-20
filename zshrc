@@ -14,7 +14,7 @@ export TERM=xterm-256color
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerline"
+ZSH_THEME="lambda-mod"
 export EDITOR="vim"
 
 #
@@ -45,3 +45,4 @@ alias v='vagrant'
 alias t="ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules -R * "
 alias start="mux start xrm"
 alias stop="mux stop xrm"
+alias vim="nvim"
