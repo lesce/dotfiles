@@ -1,0 +1,9 @@
+source ~/dotfiles/zshrc
+source ~/.bin/tmuxinator.zsh
+#export PATH=/Users/andrei.lescenco/.oly/bin:$PATH
+export GO111MODULE=on
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="/usr/local/sbin:$PATH"
+eval $(thefuck --alias)
